@@ -1,0 +1,9 @@
+<%= form_for @rating, :url => { :action => "create" } do |f| %>
+  <label>product</label>
+  <%= f.text_field :product %><br>
+  <label>username</label>
+  <%= f.text_field :username %><br>
+  <label>rating</label>
+  <%= f.select :score, options_for_select([[1,1],[2,2],[3,3],[4,4],[5,5]]), { prompt: 'Select rating' } %><br>
+  <%= f.submit "Submit" %>
+<% end %>
