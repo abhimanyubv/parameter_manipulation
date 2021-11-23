@@ -12,7 +12,7 @@ class RatingsController < ApplicationController
 		@rating = Rating.new(rating_params)
 
 		if @rating.save
-			redirect_to ratings_path, notice: 'rating submitted successfully'
+			redirect_to new_rating_path, notice: 'Your rating was submitted successfully!'
 		else
 
 		end
